@@ -38,3 +38,26 @@ a {
 .product {
   margin: 30px;
 }
+.cartitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartItemDetail {
+  display: flex;
+  float: 1;
+  padding: 0 20px;
+  flex-direction: column;
+}
+.cartitem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cartitem .icon {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
