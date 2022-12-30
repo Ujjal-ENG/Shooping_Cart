@@ -19,7 +19,15 @@ const SingleProduct = ({ product }) => {
             )}
             <Rating rating={product.ratings} />
           </Card.Subtitle>
-          <Button variant="primary">Go somewhere</Button>
+          <Button style={{ marginBottom: "20px" }} variant="danger">
+            Remove from Cart
+          </Button>
+          <Button
+            variant={!product.inStock ? "warning" : "primary"}
+            disabled={!product.inStock}
+          >
+            {!product.inStock ? "Out of Stock" : "Add to Cart"}
+          </Button>
         </Card.Body>
       </Card>
     </div>
