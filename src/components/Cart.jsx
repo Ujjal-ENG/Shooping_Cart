@@ -24,7 +24,7 @@ const Cart = () => {
       <div className="productContainer">
         <ListGroup>
           {cart.map((prod) => (
-            <ListGroup.Item>
+            <ListGroup.Item key={prod.id}>
               <Row>
                 <Col md={2}>
                   <Image src={prod.image} alt={prod.name} fluid rounded />
@@ -40,7 +40,19 @@ const Cart = () => {
                   <Rating rating={prod.ratings} />
                 </Col>
                 <Col md={2}>
-                  <Form.Control as="select" value={prod.qty}>
+                  <Form.Control
+                    as="select"
+                    value={prod.qty}
+                    onChange={(e) =>
+                      dispatch({
+                        type: "CHANGE_CART_QTY",
+                        payload: {
+                          id: prod.id,
+                          qty: e.target.value,
+                        },
+                      })
+                    }
+                  >
                     {[...Array(prod.inStock).keys()].map((x) => (
                       <option key={x + 1}>{x + 1}</option>
                     ))}
