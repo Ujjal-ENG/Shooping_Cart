@@ -2,3 +2,33 @@ a {
   text-decoration: none !important;
   color: inherit !important;
 }
+
+.home {
+  display: flex;
+}
+
+.productContainer {
+  display: flex;
+  width: 78%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.filters {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: bisque;
+  font-weight: bold;
+  font-size: 20px;
+  gap: 4rem;
+}
+.filters Button {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: greenyellow;
+}
