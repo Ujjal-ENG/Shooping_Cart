@@ -26,9 +26,15 @@ a {
   font-weight: bold;
   font-size: 20px;
   gap: 4rem;
+  height: 680px;
+  cursor: pointer;
 }
 .filters Button {
   font-size: 20px;
   font-weight: bold;
   background-color: greenyellow;
+}
+
+.product {
+  margin: 30px;
 }
