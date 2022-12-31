@@ -4,11 +4,11 @@ import Rating from "./Rating";
 
 const Filter = () => {
   const {
-    productState: { byStock, byFastDelivery, byRating, sort, searchQuery },
+    productState: { byStock, byFastDelivery, byRating, sort },
     productDispatch,
   } = CartState();
 
-  console.log(byStock, byFastDelivery, sort, byRating, searchQuery);
+  console.log(byStock, byFastDelivery, sort, byRating);
 
   return (
     <div className="filters">

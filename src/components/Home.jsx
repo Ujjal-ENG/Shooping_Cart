@@ -6,13 +6,24 @@ import Filter from "./Filter";
 const Home = () => {
   const {
     state: { products },
+    productState: { byStock, byFastDelivery, byRating, sort, searchQuery },
   } = CartState();
-  console.log(products);
+
+  const transformProducts = () => {
+    let sortedProducts = products;
+    if (sort) {
+      sortedProducts = sortedProducts.sort((a, b) =>
+        sort === "lowToHigh" ? a.price - b.price : b.price - a.price
+      );
+    }
+    return sortedProducts;
+  };
+  
   return (
     <div className="home">
       <Filter />
       <div className="productContainer">
-        {products.map((product) => {
+        {transformProducts().map((product) => {
           return <SingleProduct product={product} key={product.id} />;
         })}
       </div>
