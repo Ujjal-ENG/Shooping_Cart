@@ -9,7 +9,6 @@ const SingleProduct = ({ product }) => {
     state: { cart },
     dispatch,
   } = CartState();
-  console.log(cart);
   return (
     <div className="product">
       <Card style={{ width: "18rem" }}>
